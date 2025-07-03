@@ -1,0 +1,32 @@
+# === AI Core ===
+torch>=2.1.0             # Core deep learning framework (use torch with CUDA if GPU)
+diffusers>=0.25.0        # Hugging Face Diffusers library for Stable Diffusion
+transformers>=4.36.2     # For tokenizer & CLIP models
+safetensors              # Safer model loading
+
+# === Acceleration & Memory Optimizations ===
+accelerate>=0.24.0       # Optimizes model execution
+xformers                 # Optional - memory-efficient attention (if supported on your GPU)
+triton                   # Optional - faster inference (auto-installed with PyTorch sometimes)
+
+# === Image Processing ===
+Pillow                   # Python Imaging Library (image saving, manipulation)
+opencv-python            # Optional - advanced image processing
+
+# === Web Server (FastAPI) ===
+fastapi                  # Lightweight, high-performance web framework
+uvicorn[standard]        # ASGI server to serve FastAPI apps
+
+# === Frontend Compatibility ===
+python-multipart         # For handling form-data (image/prompt uploads)
+aiofiles                 # Async file reading (needed by FastAPI)
+
+# === Hugging Face Integration ===
+huggingface_hub>=0.19.0  # For model downloading, caching, auth etc.
+
+# === Logging & Dev Utilities ===
+loguru                   # Optional - better logging
+python-dotenv            # Load environment variables from .env
+
+# === Security (CORS) ===
+starlette                # Underlying FastAPI framework (may be auto-installed)

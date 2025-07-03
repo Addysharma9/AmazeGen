@@ -1,0 +1,24 @@
+<form id="promptForm">
+  <input type="text" name="prompt" id="promptInput" />
+  <button type="submit">Generate Image</button>
+</form>
+<img id="resultImage" />
+
+<script>
+document.getElementById('promptForm').onsubmit = async (e) => {
+  e.preventDefault();
+  const formData = new FormData();
+  formData.append("prompt", document.getElementById("promptInput").value);
+
+  const res = await fetch("http://localhost:8000/generate", {
+    method: "POST",
+    body: formData
+  });
+
+  const data = await res.json();
+
+  if (data.image_base64) {
+    document.getElementById("resultImage").src = "data:image/png;base64," + data.image_base64;
+  }
+};
+</script>

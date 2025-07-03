@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.safetensors
+*.ckpt
+*.pth
+
+# Node
+node_modules/
+dist/
+
+# OS junk
+.DS_Store
+Thumbs.db
+# .gitignore
+.venv/
+__pycache__/
+node_modules/
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.bin
+.venv/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
